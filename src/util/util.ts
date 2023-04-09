@@ -37,4 +37,7 @@ export async function deleteLocalFiles(files: Array<string>) {
     fs.unlinkSync(file);
   }
 }
-
+// to check whether an image URL is valid
+export  function checkImageURL(imageUrl: string): boolean {
+  return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(imageUrl);
+}
